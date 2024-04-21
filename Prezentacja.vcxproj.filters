@@ -42,4 +42,9 @@
       <Filter>Pliki zasobów</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="matrix.txt">
+      <Filter>Pliki zasobów</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

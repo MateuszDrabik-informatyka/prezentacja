@@ -15,9 +15,10 @@ import zadanie6;
 /// 6.Równania liniowe
 int main()
 {
-    zad1();
-    zad2();
-    zad3();
-    zad4();
+    //zad1();
+    //zad2();
+    //zad3();
+    //zad4();
+    zad6();
     return 0;
 }
