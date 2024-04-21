@@ -63,6 +63,7 @@ static void det(const std::vector<std::vector<double>>& matrix, double& det)
 			det = matrix[0][0] * matrix[1][1] - matrix[1][0] * matrix[0][1];
 			return;
 		}
+
 	}
 }
 
