@@ -8,6 +8,7 @@ module;
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include <mutex>
 export module zadanie6;
 
 static void determinant(std::vector<std::vector<double>> a, double& det)
@@ -158,19 +159,25 @@ static void inverse_matrix(const std::vector<std::vector<double>>& in, std::vect
 	out = adj_matrix;
 }
 
-std::vector<std::vector<double>> multiple_matrix(const std::vector<std::vector<double>>& a, const std::vector<std::vector<double>>& b)
+std::vector<std::vector<double>> multiply_matrix(const std::vector<std::vector<double>>& a, const std::vector<std::vector<double>>& b)
 {
 	if (a[0].size() == b.size()&& b.size()>0)
 	{
 		std::vector<std::vector<double>> c(a.size(), std::vector<double>(b[0].size(),0.0));
+		std::vector<std::jthread> threads;
+		std::mutex mtx;
 		for (int i = 0; i < a.size(); ++i)
 		{
 			for (int j = 0; j < b[0].size(); ++j)
 			{
-				for (int k = 0; k < a[0].size(); ++k)
-				{
-					c[i][j] += a[i][k] * b[k][j];
-				}
+				threads.push_back(std::jthread([&a,&b,&c,i,j,&mtx]()
+					{
+						for (int k = 0; k < a[0].size(); ++k)
+						{
+							std::lock_guard<std::mutex> lock(mtx);
+							c[i][j] += a[i][k] * b[k][j];
+						}
+					}));
 			}
 		}
 		return c;
@@ -188,7 +195,7 @@ export void zad6()
 	std::vector < std::vector<double>> x;
 	get_matrix(A, b, file);
 	inverse_matrix(A, A1);
-	x = multiple_matrix(A1, b);
+	x = multiply_matrix(A1, b);
 	for (auto& i : x)
 	{
 		for (auto& j : i)
@@ -197,4 +204,13 @@ export void zad6()
 		}
 		std::cout << std::endl;
 	}
+	// rozwiazanie:
+	//0.5524
+	//1.877
+	//0.5088
+	//0.2098
+	//- 1.472
+	//0.6291
+	//- 2.674
+	//0.7822
 }
