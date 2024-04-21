@@ -136,6 +136,8 @@
     <ClCompile Include="Prezentacja.cpp" />
     <ClCompile Include="zadanie3.ixx" />
     <ClCompile Include="zadanie4.ixx" />
+    <ClCompile Include="zadanie5.ixx" />
+    <ClCompile Include="zadanie6.ixx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="weather_stations.csv" />

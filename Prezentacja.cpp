@@ -6,6 +6,13 @@ import zadanie4;
 import zadanie5;
 import zadanie6;
 
+
+/// 1.FizzBuzz
+/// 2.OBRC
+/// 3.ZigZag
+/// 4.Metoda prostokątów
+/// 5.Liczby pierwsze
+/// 6.Równania liniowe
 int main()
 {
     zad1();
