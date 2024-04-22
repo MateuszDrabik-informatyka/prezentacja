@@ -18,7 +18,7 @@ int main()
     //zad1();
     //zad2();
     //zad3();
-    //zad4();
-    zad6();
+    zad4();
+    //zad6();
     return 0;
 }
