@@ -1,4 +1,4 @@
-﻿#include <iostream>
+﻿#include<vector>
 import zadanie1;
 import zadanie2;
 import zadanie3;
@@ -17,8 +17,9 @@ int main()
 {
     //zad1();
     //zad2();
-    //zad3();
-    zad4();
+    //zad3(std::vector<int>{ 1, 5, 2, 4, 0, 10, 5, 20, 0, 1, 2, 0, 4, 2, 6, 10, 2, 0, 2, 4 });
+    //zad4(1,10);
+    //zad5(100000);
     //zad6();
     return 0;
 }
