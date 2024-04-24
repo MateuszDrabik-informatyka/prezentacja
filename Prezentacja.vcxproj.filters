@@ -36,6 +36,9 @@
     <ClCompile Include="zadanie6.ixx">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+    <ClCompile Include="transformata_fouriera.ixx">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="weather_stations.csv">

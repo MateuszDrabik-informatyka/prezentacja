@@ -5,6 +5,7 @@ import zadanie3;
 import zadanie4;
 import zadanie5;
 import zadanie6;
+import Przyklad;
 
 
 /// 1.FizzBuzz
@@ -21,5 +22,6 @@ int main()
     //zad4(1,10);
     //zad5(100000);
     //zad6();
+    Przyklad();
     return 0;
 }

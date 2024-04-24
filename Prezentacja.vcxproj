@@ -131,6 +131,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="transformata_fouriera.ixx" />
     <ClCompile Include="zadanie1.ixx" />
     <ClCompile Include="zadanie2.ixx" />
     <ClCompile Include="Prezentacja.cpp" />
